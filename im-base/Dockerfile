@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     python-soappy \
-    python-pbr \
     python-dateutil \
     python-mock \
     python-nose \
@@ -21,4 +20,4 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # Install CherryPy to enable HTTPS in REST API
-RUN pip install CherryPy pyOpenSSL
+RUN pip install pbr CherryPy pyOpenSSL
