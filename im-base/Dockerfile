@@ -20,4 +20,5 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # Install CherryPy to enable HTTPS in REST API
-RUN pip install pbr CherryPy pyOpenSSL setuptools --upgrade -I
+RUN pip install setuptools --upgrade -I
+RUN pip install pbr CherryPy pyOpenSSL --upgrade -I
