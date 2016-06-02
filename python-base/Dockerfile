@@ -11,3 +11,6 @@ RUN apt-get update && apt-get install -y \
     python-nose \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+ 
+ RUN git config --global user.email "grycap.jenkins@gmail.com" 
+ RUN git config --global user.name "grycap-jenkins"
