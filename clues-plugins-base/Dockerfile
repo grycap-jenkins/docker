@@ -4,10 +4,8 @@ LABEL description="Base container image to run python tests."
 
 # Update and install all the neccesary packages
 RUN apt-get update && apt-get install -y \
-    openssh-server \
     git \
     curl \
-    python-virtualenv \
     python-ply \
     python-mock \
     python-nose \
