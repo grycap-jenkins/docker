@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     openssh-server \
     git \
     curl \
+    python-virtualenv \
     python-ply \
     python-mock \
     python-nose \
