@@ -13,6 +13,5 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
  
-RUN git config --global user.email "grycap.jenkins@gmail.com" 
-RUN git config --global user.name "grycap-jenkins"
-RUN adduser jenkins
+RUN groupadd -g 112 devel
+RUN useradd -u 105 -g 112 jenkins
