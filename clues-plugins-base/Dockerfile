@@ -25,5 +25,4 @@ RUN git clone https://github.com/grycap/clues.git /tmp/clues
  && python setup.py install
  
 # Add jenkins user/group  
-RUN groupadd -g 112 devel
-RUN useradd -u 105 -g 112 jenkins
+RUN groupadd -g 112 devel && useradd -u 105 -g 112 jenkins
