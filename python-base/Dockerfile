@@ -4,6 +4,7 @@ LABEL description="Base container image to run python tests."
 
 # Update and install all the neccesary packages
 RUN apt-get update && apt-get install -y \
+    openssh-server \
     git \
     curl \
     python-ply \
@@ -12,5 +13,6 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
  
- RUN git config --global user.email "grycap.jenkins@gmail.com" 
- RUN git config --global user.name "grycap-jenkins"
+RUN git config --global user.email "grycap.jenkins@gmail.com" 
+RUN git config --global user.name "grycap-jenkins"
+RUN adduser jenkins
