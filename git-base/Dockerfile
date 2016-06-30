@@ -11,3 +11,10 @@ RUN apt-get update && apt-get install -y \
 # Add jenkins user/group  
 RUN groupadd -g 112 devel \
  && useradd -u 105 -g 112 jenkins
+
+RUN adduser jenkins sudo
+
+# Enable passwordless sudo for users under the "sudo" group
+RUN sed -i.bkp -e \
+      's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' \
+      /etc/sudoers
